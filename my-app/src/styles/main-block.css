@@ -1,0 +1,140 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 80px; 
+  min-height: calc(60vh - 150px);
+}
+
+/* Стили для блоков banner и gallery */
+.main-block-banner, .main-block-gallery {
+  flex: 1;
+  min-width: 0;
+  background: #EDEDED;
+  padding: 0px 20px 20px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+.main-block-banner__header, .main-block-gallery__header {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: rgb(102, 123, 89);
+}
+
+.main-block-banner__expl, .main-block-gallery__expl {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.banner-container__outer {
+  width: 100%; 
+  overflow: hidden; 
+  position: relative;
+  margin-bottom: 10px;
+}
+
+
+.banner-container__inner {
+  display: flex;
+  gap: 10px;
+  animation: scroll 40s linear infinite; 
+}
+
+
+.banner-container__inner img {
+  flex-shrink: 0; 
+  width: 270px; 
+  height: 270px; 
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0); 
+  }
+  100% {
+      transform: translateX(-50%); 
+  }
+}
+
+.gallery-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+/* изображения */
+.gallery-image {
+  flex-shrink: 0; 
+  width: 200px; 
+  height: 200px; 
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* кнопки */
+.banner-button__link {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.2rem;
+  background-color: rgb(102, 123, 89);
+  margin-top: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 270px;
+  text-align: center;
+}
+
+
+.gallery-button__link {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.2rem;
+  background-color: rgb(102, 123, 89);
+  margin-top: 40px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 270px;
+  text-align: center;
+}
+
+.banner-button__link:hover, .gallery-button__link:hover {
+  background-color: #5a6b57;
+}
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}

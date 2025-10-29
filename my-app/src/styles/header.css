@@ -1,0 +1,76 @@
+/* Header styles start*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #E3E2DE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    
+}
+
+
+/* Header styles end*/
+
+/* HeaderLabel styles start*/
+
+.headerlabel-title {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    text-decoration: none;
+}
+
+  .headerlabel-title-link {
+    text-decoration: none;
+    color: rgb(102, 123, 89);
+    font-size: 1.8rem;
+    transition: color 0.7s ease;
+  }
+
+  .headerlabel-title-link:hover {
+   color: rgb(165, 178, 139);
+ }
+
+ /* HeaderLabel styles end*/
+
+
+ /* HeaderNavigation styles start*/
+ .headernav-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+ }
+
+   .headernav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .headernav-menu-item {
+    margin-left: 20px;
+  }
+
+  .headernav-menu-link {
+    text-decoration: none;
+    color: rgb(102, 123, 89);
+    font-size: 1rem;
+    font-weight:bold;
+    transition: color 0.3s ease;
+  }
+  
+  .headernav-menu-link:hover {
+    color: rgb(165, 178, 139);
+  }
+
+  /* HeaderNavigation styles end*/
