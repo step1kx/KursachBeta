@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
     z-index: 100;
     
 }
@@ -18,7 +18,47 @@
 
 /* Header styles end*/
 
-/* HeaderLabel styles start*/
+.headerlabel-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #E3E2DE;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    min-width: 280px;
+    display: none;
+    z-index: 1000;
+}
+
+.headerlabel-container:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+
+.dropdown-item-link {
+    text-decoration: none;
+    color: rgb(102, 123, 89);
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+  .dropdown-item-link:hover {
+   color: rgb(165, 178, 139);
+ }
+
+
+/* HeaderLabel and HeaderSubLabel styles start*/
 
 .headerlabel-title {
     font-family: "Dela Gothic One", sans-serif;
@@ -32,14 +72,25 @@
     text-decoration: none;
     color: rgb(102, 123, 89);
     font-size: 1.8rem;
-    transition: color 0.7s ease;
+    /* transition: color 0.7s ease; */
   }
 
-  .headerlabel-title-link:hover {
+  /* .headerlabel-title-link:hover {
    color: rgb(165, 178, 139);
- }
+ } */
 
- /* HeaderLabel styles end*/
+.headerlabel-subtitle {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 10px 0 0 10px;
+    text-align: end;
+    color: #4A5940;
+    font-size: 1.1rem;
+}
+
+
+ /* HeaderLabel and HeaderSubLabel styles end*/
 
 
  /* HeaderNavigation styles start*/
@@ -71,6 +122,14 @@
   
   .headernav-menu-link:hover {
     color: rgb(165, 178, 139);
+  }
+
+  .headernav-menu-image {
+      flex-shrink: 0; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 8px;
+    transition: transform 0.3s ease;
   }
 
   /* HeaderNavigation styles end*/

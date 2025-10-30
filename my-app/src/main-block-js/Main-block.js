@@ -1,5 +1,8 @@
+import React, { useState } from 'react';
+
 import '../styles/main-block.css'
 import '../styles/aside-block.css'
+import '../styles/slider.css';
 
 import cupsPhoto1 from '../assets/cupsPhoto1.webp';
 import cupsPhoto2 from '../assets/cupsPhoto2.webp';
@@ -10,6 +13,52 @@ import cupsPhoto5 from '../assets/cupsPhoto5.webp';
 import catalogPhoto1 from '../assets/drip-bag.jpg';
 import catalogPhoto2 from '../assets/coffee-beans.png';
 import catalogPhoto3 from '../assets/coffee-filter.jpg';
+
+import seasonMenuPhoto1 from '../assets/cofixTest.jpg'
+import seasonMenuPhoto2 from '../assets/cofixTest2.jpg'
+import seasonMenuPhoto3 from '../assets/cofixTest3.jpg'
+import seasonMenuPhoto4 from '../assets/seasonMenu.jpg'
+
+
+
+function MainPhotoSlider() {
+    const slides = [seasonMenuPhoto1, seasonMenuPhoto2, seasonMenuPhoto3];
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    };
+
+    return (
+        <div className="slider-container">
+            <div 
+                className="slider-wrapper"
+                style={{ transform: `translateX(-${currentSlide * (100/3)}%)` }}
+            >
+                {slides.map((slide, index) => (
+                    <div
+                        key={index}
+                        className="slide"
+                    >
+                        <img src={slide} alt={`Slide ${index + 1}`} />
+                    </div>
+                ))}
+            </div>
+            
+            <button className="slider-arrow prev" onClick={prevSlide}>
+                ‹
+            </button>
+            <button className="slider-arrow next" onClick={nextSlide}>
+                ›
+            </button>
+        </div>
+    );
+}
+
 
 function MainBlock () {
     return (
@@ -101,10 +150,11 @@ function AdditionalBlocks() {
 export default function Main() {
     return (
         <main className="main">
+            <MainPhotoSlider/>
             <div className="main-top-row">
                 <MainBlock/>
             </div>
-            <AdditionalBlocks/>
+            <AdditionalBlocks/> 
         </main>
     );
 }
