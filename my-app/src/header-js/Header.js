@@ -1,6 +1,5 @@
 import '../styles/header.css';
-import backetIcon from '../assets/market-backet.png';
-import cupsLogo from '../assets/cupsLogo.png';
+import backetIcon from '../assets/codicon_account.png';
 
 function HeaderLabel () {
     return (
@@ -33,7 +32,8 @@ function HeaderNavigation () {
     return (
         <nav className="headernav-nav">
             <a className="headernav-menu-link" href='#'>
-                <img src={backetIcon} alt="Иконка корзины" className="headernav-menu-image"></img>
+                Личный кабинет
+                <img src={backetIcon} alt="Иконка профиля" className="headernav-menu-image"></img>
             </a>
         </nav>
     );

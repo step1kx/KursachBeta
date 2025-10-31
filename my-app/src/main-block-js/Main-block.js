@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import '../styles/main-block.css'
 import '../styles/aside-block.css'
 import '../styles/slider.css';
+import '../styles/main-block.css'
 
 import cupsPhoto1 from '../assets/cupsPhoto1.webp';
 import cupsPhoto2 from '../assets/cupsPhoto2.webp';
@@ -50,10 +50,10 @@ function MainPhotoSlider() {
             </div>
             
             <button className="slider-arrow prev" onClick={prevSlide}>
-                ‹
+                ⇽
             </button>
             <button className="slider-arrow next" onClick={nextSlide}>
-                ›
+                ⇾
             </button>
         </div>
     );
