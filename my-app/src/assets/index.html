@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/media-queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/assets/image/faviiconWithBackground.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <title>CUP's</title>
+</head>
+<body>
+    <header class="header">
+        <h2 class="header__title"><a href="index.html" class="header__title_link">CUP's</a></h2>
+        <img src="/assets/image/menu.png" alt="Меню" class="menu-toggle show-menu">
+        <img src="/assets/image/close-icon.png" alt="Крестик" class="menu-toggle show-cross hidden">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                   <a href="offers.html" class="header__menu-link">Каталог</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="contacts.html" class="header__menu-link">Контакты</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="loginAccount.html" class="header__menu-link">Личный кабинет</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="basketOfProducts.html" class="header__menu-link">Корзина</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="main">
+        <section class="banner shadow-box">
+            <h2 class="banner__header">Наш кофейный магазин</h2>
+            <p class="banner__expl">
+                Фотографии нашего магазина
+            </p>
+            <div class="banner__container-outer">
+                <div class="banner__container-inner">
+                    <img src="/assets/image/cupsPhoto1.webp" alt="Фото магазина 1" class="banner__image">
+                    <img src="/assets/image/cupsPhoto2.webp" alt="Фото магазина 2" class="banner__image">
+                    <img src="/assets/image/cupsPhoto3.webp" alt="Фото магазина 3" class="banner__image">
+                    <img src="/assets/image/cupsPhoto4.webp" alt="Фото магазина 4" class="banner__image">
+                    <img src="/assets/image/cupsPhoto5.webp" alt="Фото магазина 5" class="banner__image">
+                    <!-- Дублируем изображения для бесконечного эффекта -->
+                    <img src="/assets/image/cupsPhoto1.webp" alt="Фото магазина 1" class="banner__image">
+                    <img src="/assets/image/cupsPhoto2.webp" alt="Фото магазина 2" class="banner__image">
+                    <img src="/assets/image/cupsPhoto3.webp" alt="Фото магазина 3" class="banner__image">
+                    <img src="/assets/image/cupsPhoto4.webp" alt="Фото магазина 4" class="banner__image">
+                    <img src="/assets/image/cupsPhoto5.webp" alt="Фото магазина 5" class="banner__image">
+                </div>
+            </div>
+            <a href="/html/contacts.html" class="banner__button-link">Узнать больше</a>
+        </section>
+        <section class="gallery shadow-box">
+            <h2 class="gallery__header">Посмотрите каталог наших товаров</h2>
+            <p class="gallery__expl">
+                Мы предлагаем - кофейные зерна, фильтры для кофемашин, дрип-пакеты
+            </p>
+            <div class="gallery__container">
+                <img src="/assets/image/drip-bag.jpg" alt="Дрип-пакеты" class="gallery__image">
+                <img src="/assets/image/coffee-beans.png" alt="Кофейные зерна" class="gallery__image">
+                <img src="/assets/image/coffee-filter.jpg" alt="Фильтры для кофемашин" class="gallery__image">
+            </div>
+            <a href="/html/offers.html" class="gallery__button-link">Каталог</a>
+        </section>
+    </main>
+    
+    
+    <footer class="footer">
+        <p class="footer__text">© 2025 CUP's. Все права защищены</p>
+    </footer>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/carusel.js"></script>
+</body>
+</html>

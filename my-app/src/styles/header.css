@@ -1,0 +1,144 @@
+/* Header styles start*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F5ECDB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    
+}
+
+
+/* Header styles end*/
+
+.headerlabel-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ADA86D;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    min-width: 280px;
+    display: none;
+    z-index: 1000;
+    opacity: 100%;
+}
+
+.headerlabel-container:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+
+.dropdown-item-link {
+    text-decoration: none;
+    color: #F6F5EC;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+  .dropdown-item-link:hover {
+   color: #FBEACC;
+ }
+
+
+/* HeaderLabel and HeaderSubLabel styles start*/
+
+.headerlabel-title {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    text-decoration: none;
+}
+
+  .headerlabel-title-link {
+    text-decoration: none;
+    color: #6B6630;
+    font-size: 1.8rem;
+    /* transition: color 0.7s ease; */
+  }
+
+  /* .headerlabel-title-link:hover {
+   color: rgb(165, 178, 139);
+ } */
+
+.headerlabel-subtitle {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 10px 0 0 10px;
+    text-align: end;
+    color: #6B6630;
+    font-size: 1.1rem;
+}
+
+
+ /* HeaderLabel and HeaderSubLabel styles end*/
+
+
+ /* HeaderNavigation styles start*/
+.headernav-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.headernav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.headernav-menu-item {
+    margin-left: 20px;
+}
+
+.headernav-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #6B6630;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-align: center;
+    padding: 8px 12px;
+}
+
+.headernav-menu-link:hover {
+    color: #ADA86D;
+}
+
+.headernav-menu-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.headernav-menu-link:hover .headernav-menu-image {
+    transform: scale(1.1);
+}
+
+  /* HeaderNavigation styles end*/
