@@ -1,17 +1,10 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  margin-top: 80px; 
-  min-height: auto; /* убрать фиксированную высоту */
-}
+
 
 .main-top-row {
   display: flex;
   flex-direction: row;
+  margin-top: -10px;
   gap: 20px;
-  width: 100%;
 }
 
 .additional-blocks {

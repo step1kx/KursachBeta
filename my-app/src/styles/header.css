@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #FBEACC;
+    background-color: #F5ECDB;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,14 +27,14 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: #501205;
+    background: #ADA86D;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     border-radius: 5px;
     padding: 10px 0;
     min-width: 280px;
     display: none;
     z-index: 1000;
-    opacity: 75%;
+    opacity: 100%;
 }
 
 .headerlabel-container:hover .dropdown-menu {
@@ -49,13 +49,13 @@
 
 .dropdown-item-link {
     text-decoration: none;
-    color: #FBEACC;
+    color: #F6F5EC;
     font-size: 1.1rem;
     transition: color 0.2s ease;
 }
 
   .dropdown-item-link:hover {
-   color: rgb(165, 178, 139);
+   color: #FBEACC;
  }
 
 
@@ -71,7 +71,7 @@
 
   .headerlabel-title-link {
     text-decoration: none;
-    color: rgb(102, 123, 89);
+    color: #6B6630;
     font-size: 1.8rem;
     /* transition: color 0.7s ease; */
   }
@@ -86,7 +86,7 @@
     font-style: normal;
     margin: 10px 0 0 10px;
     text-align: end;
-    color: #4A5940;
+    color: #6B6630;
     font-size: 1.1rem;
 }
 
@@ -118,7 +118,7 @@
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: rgb(102, 123, 89);
+    color: #6B6630;
     font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -127,7 +127,7 @@
 }
 
 .headernav-menu-link:hover {
-    color: rgb(165, 178, 139);
+    color: #ADA86D;
 }
 
 .headernav-menu-image {

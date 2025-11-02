@@ -1,5 +1,5 @@
 import '../styles/header.css';
-import backetIcon from '../assets/codicon_account.png';
+import backetIcon from '../assets/Group.png';
 
 function HeaderLabel () {
     return (
