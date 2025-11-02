@@ -3,24 +3,31 @@ import React, { useState } from 'react';
 import '../styles/fonts.css';
 import '../styles/main-block.css'
 import '../styles/aside-block.css'
+import '../styles/dessert.css'
+import '../styles/review.css'
 import '../styles/slider.css';
 
 
 import leftArrow from '../assets/leftArrow.png';
 import rightArrow from '../assets/rightArrow.png';
 
-import cupsPhoto1 from '../assets/cupsPhoto1.webp';
-import cupsPhoto2 from '../assets/cupsPhoto2.webp';
-import cupsPhoto3 from '../assets/cupsPhoto3.webp';
-import cupsPhoto4 from '../assets/cupsPhoto4.webp';
-import cupsPhoto5 from '../assets/cupsPhoto5.webp';
-
-
 import seasonMenuPhoto1 from '../assets/cupsiFinal.png'
 import seasonMenuPhoto2 from '../assets/cupsiOtvari.png'
 import seasonMenuPhoto3 from '../assets/cupsiKakao.png'
 
 import cupsiVideo from '../assets/cupsiVideo.mp4'
+
+import thematic1 from '../assets/cupsTematic1.jpg'
+import thematic2 from '../assets/cupsTematic2.jpg'
+import thematic3 from '../assets/cupsTematic3.jpg'
+import thematic4 from '../assets/cupsTematic4.jpg'
+import thematic5 from '../assets/cupsTematic5.jpg'
+
+import regular1 from '../assets/cupsDesert1.jpg'
+import regular2 from '../assets/cupsDesert2.jpg'
+import regular3 from '../assets/cupsDesert3.jpg'
+import regular4 from '../assets/cupsDesert4.jpg'
+
 
 function MainMenu () {
     return (
@@ -351,10 +358,10 @@ function MainPhotoSlider() {
             </div>
             
             <button className="slider-arrow prev" onClick={prevSlide}>
-                <img className="slider-arrow-img prev" src={leftArrow}></img>
+                <img className="slider-arrow-img prev" src={leftArrow} alt="Сезонное меню"></img>
             </button>
             <button className="slider-arrow next" onClick={nextSlide}>
-                <img className="slider-arrow-img next" src={rightArrow}></img>
+                <img className="slider-arrow-img next" src={rightArrow} alt="Сезонное меню"></img>
             </button>
         </div>
     );
@@ -407,6 +414,107 @@ function MapBlock () {
     );
 }
 
+function DessertBlock () {
+    // Массивы с фотографиями для разных типов десертов
+    const thematicDesserts = [thematic1, thematic2, thematic3, thematic4, thematic5];
+    const regularDesserts = [regular1, regular2, regular3, regular4];
+    
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [dessertType, setDessertType] = useState('thematic'); // 'thematic' или 'regular'
+    
+    // Выбираем массив слайдов в зависимости от типа десерта
+    const slides = dessertType === 'thematic' ? thematicDesserts : regularDesserts;
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    };
+
+    // При смене типа десерта сбрасываем на первый слайд
+    const handleDessertTypeChange = (type) => {
+        setDessertType(type);
+        setCurrentSlide(0);
+    };
+
+    return (
+        <div className="aside-container">
+            <h2 className="dessert-block-aside__header">Наши десерты</h2>
+            <div className="dessert-type-buttons">
+                <button 
+                    className={`type-button ${dessertType === 'thematic' ? 'active' : ''}`}
+                    onClick={() => handleDessertTypeChange('thematic')}
+                >
+                    Тематические десерты
+                </button>
+                <button 
+                    className={`type-button ${dessertType === 'regular' ? 'active' : ''}`}
+                    onClick={() => handleDessertTypeChange('regular')}
+                >
+                    Десерты
+                </button>
+            </div>
+
+            {/* Слайдер */}
+            <div className="desert-slider-container">
+                <div 
+                    className="desert-slider-wrapper"
+                    style={{ transform: `translateX(-${currentSlide * (100/3)}%)` }}
+                >
+                    {slides.map((slide, index) => (
+                        <div
+                            key={index}
+                            className="desert-slide"
+                        >
+                            <img 
+                                src={slide} 
+                                alt={`${dessertType === 'thematic' ? 'Тематический' : 'Обычный'} десерт ${index + 1}`}
+                                loading="lazy" 
+                            />
+                        </div>
+                    ))}
+                </div>
+                
+                <button className="desert-slider-arrow prev" onClick={prevSlide}>
+                    <img className="desert-slider-arrow-img prev" src={leftArrow} alt="Предыдущий"></img>
+                </button>
+                <button className="desert-slider-arrow next" onClick={nextSlide}>
+                    <img className="desert-slider-arrow-img next" src={rightArrow} alt="Следующий"></img>
+                </button>
+            </div>
+            <p className="desert-block-aside__description">Наши поставщики десертов</p>
+            <div className="desert-block-aside__members">
+                <a href="https://www.instagram.com/verrine.minsk/" className="members-link">Verrine</a>  
+                <a href="https://www.instagram.com/drazhynbakery/" className="members-link">Пекарня Дражина</a> 
+                <a href="https://www.instagram.com/bakezavod/" className="members-link">Bake Zavod</a> 
+            </div>
+        </div>
+    );
+}
+
+function ReviewsBlock () {
+    return (
+        <div className="review-block-banner">
+            <h2 className="review-block-banner__header">Ваши отзывы</h2>
+            <div className="review-container">
+                <div className="review-iframe-wrapper">
+                    <iframe 
+                        title="Отзывы CUP's" 
+                        src="https://yandex.ru/maps-reviews-widget/232776647015?comments"
+                        width="100%" 
+                        height="100%" 
+                        style={{ border: 0 }} 
+                        allowFullScreen 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+}
 
 // В Main компоненте
 export default function Main() {
@@ -421,78 +529,13 @@ export default function Main() {
         </div>
         <div className="main-top-row">
                 <MainMenu/>
-                <MapBlock/>
+                <div className="main-top-column">
+                    <MapBlock/>
+                    <DessertBlock/>
+                    <ReviewsBlock/>
+                </div>
         </div>
         </>
     );
 }
 
-
-
-                // <div className="banner-container__outer">
-                //     <div className="banner-container__inner">
-                //         <img src={cupsPhoto1} alt="Фото магазина 1" className="banner-image"/>
-                //         <img src={cupsPhoto2} alt="Фото магазина 2" className="banner-image"/>
-                //         <img src={cupsPhoto3} alt="Фото магазина 3" className="banner-image"/>
-                //         <img src={cupsPhoto4} alt="Фото магазина 4" className="banner-image"/>
-                //         <img src={cupsPhoto5} alt="Фото магазина 5" className="banner-image"/>
-                //         <img src={cupsPhoto1} alt="Фото магазина 1" className="banner-image"/>
-                //         <img src={cupsPhoto2} alt="Фото магазина 2" className="banner-image"/>
-                //         <img src={cupsPhoto3} alt="Фото магазина 3" className="banner-image"/>
-                //         <img src={cupsPhoto4} alt="Фото магазина 4" className="banner-image"/>
-                //         <img src={cupsPhoto5} alt="Фото магазина 5" className="banner-image"/>
-                //     </div>
-                // </div>
-                // <a href="#" className="banner-button__link">Узнать больше</a>
-
-// function AdditionalBlocks() {
-//     return (
-//         <div className="additional-blocks">
-//             {/* Широкий блок - акция */}
-//             <section className="main-block-promo shadow-box">
-//                 <h2 className="main-block-promo__header">Специальное предложение</h2>
-//                 <p className="main-block-promo__expl">
-//                     Скидка 20% на все кофейные зерна до конца месяца!
-//                 </p>
-//                 <div className="promo-timer">
-//                     До конца акции: 5 дней 12:30:15
-//                 </div>
-//                 <a href="#" className="promo-button__link">Участвовать</a>
-//             </section>
-
-//             {/* Два узких блока в ряд */}
-//             <div className="row-blocks">
-//                 <section className="main-block-news shadow-box">
-//                     <h2 className="main-block-news__header">Новости</h2>
-//                     <ul className="news-list">
-//                         <li>Новый сорт кофе из Эфиопии</li>
-//                         <li>Мастер-класс по завариванию</li>
-//                         <li>Открытие нового филиала</li>
-//                     </ul>
-//                     <a href="#" className="news-button__link">Все новости</a>
-//                 </section>
-
-//                 <section className="main-block-reviews shadow-box">
-//                     <h2 className="main-block-reviews__header">Отзывы</h2>
-//                     <div className="review-item">
-//                         "Лучший кофе в городе! 👍"
-//                     </div>
-//                     <div className="review-item">
-//                         "Быстрая доставка, свежие зерна"
-//                     </div>
-//                     <a href="#" className="reviews-button__link">Оставить отзыв</a>
-//                 </section>
-//             </div>
-
-//             {/* Средний блок - о нас */}
-//             <section className="main-block-about shadow-box">
-//                 <h2 className="main-block-about__header">О нашей компании</h2>
-//                 <p className="main-block-about__text">
-//                     Мы работаем с 2010 года и предлагаем только лучшие сорта кофе 
-//                     со всего мира. Наша миссия - дарить вам незабываемые кофейные моменты.
-//                 </p>
-//                 <a href="#" className="about-button__link">Наша история</a>
-//             </section>
-//         </div>
-//     );
-// }

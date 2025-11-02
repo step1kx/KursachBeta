@@ -1,111 +1,14 @@
-
-
 .main-top-row {
   display: flex;
-  flex-direction: row;
+  align-items: flex-start;
   margin-top: -10px;
   gap: 20px;
 }
 
-.additional-blocks {
+.main-top-column {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  flex: 1;
 }
 
-.row-blocks {
-  display: flex;
-  gap: 20px;
-  width: 100%;
-}
-
-/* Стили для новых блоков */
-.main-block-promo, .main-block-news, .main-block-reviews, .main-block-about {
-  background: #EDEDED;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.main-block-promo { width: 100%; }
-.main-block-about { width: 70%; margin: 0 auto; }
-.main-block-news, .main-block-reviews { flex: 1; }
-
-.promo-timer {
-  font-size: 1.5rem;
-  margin: 15px 0;
-}
-
-.news-list {
-  text-align: left;
-  margin: 15px 0;
-}
-
-.review-item {
-  margin: 10px 0;
-  font-style: italic;
-}
-
-.promo-button__link {
-    font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.2rem;
-  background-color: rgb(102, 123, 89);
-  margin-top: 30px;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 270px;
-  text-align: center;
-}
-
-.news-button__link {
-    font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.2rem;
-  background-color: rgb(102, 123, 89);
-  margin-top: 30px;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 270px;
-  text-align: center;
-}
-
-.reviews-button__link {
-    font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.2rem;
-  background-color: rgb(102, 123, 89);
-  margin-top: 30px;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 270px;
-  text-align: center;
-}
-
-.about-button__link {
-    font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.2rem;
-  background-color: rgb(102, 123, 89);
-  margin-top: 30px;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 270px;
-  text-align: center;
-}
