@@ -1,0 +1,159 @@
+.footer-block {
+    margin-top: 40px;
+}
+
+.contactInfo-block {
+    width: 100%;
+    min-width: 0;
+    background: #D3BDA4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Первая строка */
+.contactInfo-block-first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contactInfo-block-first__header {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: #3C2B17;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.contactInfo-contacts {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact-phone, .contact-address {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #3C2B17;
+    font-weight: 500;
+}
+
+/* Вторая строка */
+.contactInfo-block-second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.download-app-btn {
+    background: #3C2B17;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    text-align: left;
+    max-width: 200px;
+}
+
+.download-app-btn:hover {
+    background: #2A1E10;
+}
+
+.contact-phone-second {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #3C2B17;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+}
+
+.company-name {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #3C2B17;
+    font-weight: 500;
+    flex: 1;
+    text-align: right;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .contactInfo-block-first, 
+    .contactInfo-block-second {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .contactInfo-block-first__header {
+        text-align: center;
+        order: 1;
+    }
+    
+    .contactInfo-contacts {
+        justify-content: center;
+        order: 2;
+        gap: 15px;
+    }
+    
+    .download-app-btn {
+        order: 1;
+        max-width: none;
+        text-align: center;
+    }
+    
+    .contact-phone-second {
+        order: 2;
+        text-align: center;
+    }
+    
+    .company-name {
+        order: 3;
+        text-align: center;
+    }
+    
+    .contact-phone, .contact-address,
+    .contact-phone-second, .company-name {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactInfo-contacts {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .contactInfo-block {
+        padding: 15px 10px;
+    }
+    
+    .contactInfo-block-first__header {
+        font-size: 1rem;
+    }
+}

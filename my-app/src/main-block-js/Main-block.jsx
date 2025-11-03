@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
+import AboutUs from '../aboutUs-js/AboutUs'
+
 import '../styles/fonts.css';
-import '../styles/main-block.css'
-import '../styles/aside-block.css'
-import '../styles/dessert.css'
-import '../styles/review.css'
-import '../styles/slider.css';
+import '../styles/main-block/main-block.css'
+import '../styles/main-block/aside-block.css'
+import '../styles/main-block/dessert.css'
+import '../styles/main-block/review.css'
+import '../styles/slider/slider.css';
 
 
 import leftArrow from '../assets/leftArrow.png';
@@ -156,7 +158,7 @@ function MainMenu () {
             <div className="menu-column">
                 {/* Не кофе */}
                 <div className="menu-category">
-                    <h2 className="category-title">не кофе</h2>
+                    <h2 className="category-title">Не кофе</h2>
                     <div className="menu-items">
                         <div className="menu-item">
                             <span className="item-name">Чай</span>
@@ -502,10 +504,10 @@ function ReviewsBlock () {
                 <div className="review-iframe-wrapper">
                     <iframe 
                         title="Отзывы CUP's" 
+                        className="review-iframe-wrapper__iframe"
                         src="https://yandex.ru/maps-reviews-widget/232776647015?comments"
                         width="100%" 
                         height="100%" 
-                        style={{ border: 0 }} 
                         allowFullScreen 
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade"
@@ -534,6 +536,9 @@ export default function Main() {
                     <DessertBlock/>
                     <ReviewsBlock/>
                 </div>
+        </div>
+        <div>
+            <AboutUs/>
         </div>
         </>
     );

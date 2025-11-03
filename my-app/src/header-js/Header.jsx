@@ -1,4 +1,4 @@
-import '../styles/header.css';
+import '../styles/header/header.css';
 import backetIcon from '../assets/Group.png';
 
 function HeaderLabel () {

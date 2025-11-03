@@ -112,11 +112,6 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.desert-slider-arrow:hover {
-    background-color: #A5B28B;
-    color: #F6F5EC;
-}
-
 .desert-slider-arrow.prev {
     left: 10px;
 }
