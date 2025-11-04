@@ -1,11 +1,14 @@
-import Header from './header-js/Header'
-import Main from './main-block-js/Main-block';
+import React from 'react';
+import Header from './components/Header';
+import Home from './pages/Home';
 
-export default function MyApp() {
-    return (
-        <>
-            <Header/>
-            <Main/>
-        </>
-    );
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Home />
+    </div>
+  );
 }
+
+export default App;

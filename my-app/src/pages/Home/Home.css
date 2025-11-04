@@ -1,0 +1,29 @@
+.main {
+  justify-content:space-evenly;
+  gap: 0px !important;
+  padding: 0px !important;
+  margin-top: 63px !important; 
+  min-height: calc(60vh - 150px);
+}
+
+.main-top-row {
+  display: flex;
+  align-items: flex-start;
+  margin-top: -10px;
+  gap: 20px;
+}
+
+.main-top-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.main-content-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0px !important;
+}
+

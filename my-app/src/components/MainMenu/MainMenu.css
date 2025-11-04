@@ -1,0 +1,295 @@
+@font-face {
+    font-family: 'Zabava' sans-serif;
+    src: url('../../fonts/Zabava_mari_chenak_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main {
+  justify-content:space-evenly;
+  gap: 0px !important;
+  padding: 0px !important;
+  margin-top: 63px !important; 
+  min-height: calc(60vh - 150px);
+}
+
+/* Стили для блоков banner и gallery */
+.main-block-banner{
+  min-width: 0;
+  background: #D3BDA4;
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-block-gallery {
+  width: 60%;
+  background: #D3BDA4;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+.main-block-banner__header {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: #3C2B17;
+}
+
+.main-block-gallery__header {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: #3C2B17;
+  margin: 23px 0 0 0;
+}
+
+
+
+
+.banner-container__outer {
+  width: 100%; 
+  overflow: hidden; 
+  position: relative;
+  margin-bottom: 10px;
+}
+
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0); 
+  }
+  100% {
+      transform: translateX(-50%); 
+  }
+}
+
+.gallery-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.container-mainMenu {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #F5ECDB;
+    color: #2c1810;
+    border-radius: 15px;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu-main-title {
+    font-size: 4rem;
+    font-weight: normal;
+    color: #6B6630;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.menu-subtitle {
+    font-size: 1.3rem;
+    color: #6B6630;
+    margin: -5px 0 0 0;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+/* Верхняя часть - напитки */
+.menu-drinks-section {
+    margin-bottom: 60px;
+}
+
+/* Нижняя часть - еда */
+.menu-food-section {
+    border-top: 2px solid #8b4513;
+    padding-top: 40px;
+}
+
+.menu-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Обеспечиваем одинаковую высоту блоков в drinks-section */
+.menu-drinks-section .menu-column {
+    min-height: 600px; /* Регулируйте по необходимости */
+}
+
+.menu-drinks-section .menu-column:first-child {
+    /* Левая колонка - 2 блока */
+    justify-content: space-between;
+}
+
+.menu-drinks-section .menu-column:last-child {
+    /* Правая колонка - 3 блока */
+    justify-content: space-between;
+}
+
+.menu-category {
+    break-inside: avoid;
+}
+
+.category-title {
+    font-family: 'Zabava';
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c1810;
+
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.category-subtitle {
+    font-size: 1rem;
+    color: #5d4037;
+    margin: -10px 0 15px 0;
+    font-style: italic;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.item-name {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    flex: 1;
+    font-size: 1rem;
+    color: #5D3117;
+    text-align: left;
+}
+
+.item-volume {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 0.85rem;
+    color: #A46A1F;
+    white-space: nowrap;
+    margin-left: 4px;
+}
+
+.item-dots {
+    flex: 1;
+    border-bottom: 1px dotted #8b4513;
+    margin: 0 5px;
+    min-width: 20px;
+    position: relative;
+    top: -2px;
+}
+
+.item-price {
+      font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #918458;
+    white-space: nowrap;
+}
+
+/* Для больших элементов (завтраки, сэндвичи) */
+.menu-item-large {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.item-content {
+    flex: 1;
+}
+
+.item-name-large {
+      font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #5D3117;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.item-description {
+      font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  display: block;
+    font-size: 0.9rem;
+    color: #A46A1F;
+    text-align: left;
+}
+
+.item-price-large {
+        font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: #918458;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .menu-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .menu-main-title {
+        font-size: 3rem;
+    }
+    
+    .container-mainMenu {
+        padding: 20px 15px;
+    }
+    
+    .menu-drinks-section .menu-column {
+        min-height: auto;
+    }
+}

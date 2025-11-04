@@ -1,7 +1,7 @@
-import '../styles/header/header.css';
-import backetIcon from '../assets/Group.png';
+import React from 'react';
+import './HeaderLabel.css';
 
-function HeaderLabel () {
+function HeaderLabel() {
     return (
         <>
             <div className="headerlabel-container">
@@ -28,23 +28,4 @@ function HeaderLabel () {
     );
 }
 
-function HeaderNavigation () {
-    return (
-        <nav className="headernav-nav">
-            <a className="headernav-menu-link" href='#'>
-                Личный кабинет
-                <img src={backetIcon} alt="Иконка профиля" className="headernav-menu-image"></img>
-            </a>
-        </nav>
-    );
-}
-
-
-export default function Header() {
-    return (
-        <header className="header">
-            <HeaderLabel/>
-            <HeaderNavigation/>
-        </header>
-    );
-}
+export default HeaderLabel;
