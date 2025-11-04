@@ -3,17 +3,11 @@ import React, { useState } from 'react';
 import '../styles/aboutUs/aboutUs.css'
 import '../styles/aboutUs/footer.css'
 
-import robotnik from "../assets/mister_rabotnik.jpg";
+import catOwner from "../assets/catBiznes.jpg";
+import catControl from "../assets/catControl.jpg";
+import catBarista from "../assets/catBarista.jpg";
 
-
-// function EmployeeBlock () {
-//     return (
-//         <div className="employee-block">
-//             <h2 className="employee-block__header">Наш коллектив</h2>
-            
-//         </div>
-//     );
-// }
+import cupsLogo from "../assets/cupsLogoInsta.jpg"
 
 function EmployeeBlock() {
     const employees = [
@@ -21,43 +15,43 @@ function EmployeeBlock() {
             id: 1,
             name: "Надежка",
             position: "Владелец кофейни",
-            image: robotnik
+            image: catOwner
         },
         {
             id: 2,
             name: "Лиза",
             position: "Управляющий",
-            image: robotnik
+            image: catControl
         },
         {
             id: 3,
             name: "Тоня",
             position: "Бариста",
-            image: robotnik
+            image: catBarista
         },
         {
             id: 4,
             name: "Анфиса",
             position: "Бариста",
-            image: robotnik
+            image: catBarista
         },
         {
             id: 5,
             name: "Полина",
             position: "Бариста",
-            image: robotnik
+            image: catBarista
         },
         {
             id: 6,
             name: "Эмилия",
             position: "Бариста",
-            image: robotnik
+            image: catBarista
         },
         {
             id: 7,
             name: "Паша",
             position: "Бариста",
-            image: robotnik
+            image: catBarista
         },
     ];
 
@@ -87,20 +81,29 @@ function EmployeeBlock() {
     );
 }
 
-function ContactInfoBlock () {
+function ContactInfoBlock() {
     return (
-        <div className="contactInfo-block">
-            <div className="contactInfo-block-first">
-                <h2 className="contactInfo-block-first__header">© 2025 CUP's. Все права защищены</h2>
-                <div className="contactInfo-contacts">
-                    <span className="contact-phone">+375 (29) 835-69-99</span>
-                    <span className="contact-address">г.Минск ул.Папанина 11</span>
+        <div className="footer-block">
+            <div className="contactInfo-block">
+                <div className="contactInfo-left">
+                    <div className="contact-image">
+                        <img src={cupsLogo} alt="Логотип кофейни" />
+                    </div>
+                    <div className="contact-details">
+                        <h2 className="company-name">Общество с ограниченной ответственностью "Чашечки Надежды"</h2>
+                        <p className="company-details">
+                            Таварыства з абмежаванай адказнасцю "Кубачкi Надзеi"<br />
+                            УНП 193904121<br />
+                            220089, Московский р-н., г.Минск, ул.Папанина, д. 11, пом. 233
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div className="contactInfo-block-second">
-                <button className="download-app-btn">Скачать наше приложение</button>
-                    <span className="contact-phone-second">+375 (44) 589-45-89</span>
-                    <span className="company-name">ООО "Чашечки Надежды"</span>
+                <div className="contactInfo-right">
+                    <div className="bonus-block">
+                        <h3>Устанавливайте наше мобильное приложение!</h3>
+                        <button className="bonus-btn">Узнать подробнее</button>
+                    </div>
+                </div>
             </div>
         </div>
     );
