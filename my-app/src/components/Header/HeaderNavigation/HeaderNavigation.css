@@ -68,6 +68,7 @@
     justify-content: flex-end;
   }
   .headernav-menu-link {
+    overflow: hidden;
     font-size: 0.75rem;
     padding: 0;
   }

@@ -3,23 +3,32 @@ import './MapBlock.css';
 
 function MapBlock() {
     return (
-        <>
-            <section className="main-block-banner shadow-box">
-                <h2 className="main-block-banner__header">Приходите к нам</h2>
-                <div className="map-container">
+    <>
+        <section className="main-block-banner shadow-box">
+            <h2 className="map-block__header">Приходите к нам</h2>
+            <div className="map-container">
+                <div style={{
+                    position: 'relative',
+                    overflow: 'hidden',
+                    borderRadius: '20px'
+                }}>
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1175.8092986209335!2d27.51818342835553!3d53.885208239468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbd15625eac5f7%3A0x79d4f6801a013442!2sCups%20coffee%20bar!5e0!3m2!1sru!2sby!4v1737988296870!5m2!1sru!2sby&style=feature:all|element:all|hue:0xffd700|saturation:-50|lightness:0" 
+                        src="https://yandex.by/map-widget/v1/?ll=27.518033%2C53.885323&mode=poi&poi%5Bpoint%5D=27.517968%2C53.884771&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D232776647015&z=16" 
                         width="100%" 
-                        height="450" 
-                        style={{ border: 0 }} 
+                        height="400" 
+                        frameBorder="0"
                         allowFullScreen 
-                        loading="lazy" 
-                        referrerPolicy="no-referrer-when-downgrade"
+                        style={{
+                            display: 'block',
+                            border: '0',
+                            borderRadius: '20px'
+                        }}
                         title="Карта расположения кофейни Cups coffee bar"
                     ></iframe>
                 </div>
-            </section>   
-        </>
+            </div>
+        </section>   
+    </>
     );
 }
 

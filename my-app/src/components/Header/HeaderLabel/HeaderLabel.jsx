@@ -7,7 +7,7 @@ function HeaderLabel() {
             <div className="headerlabel-container">
                 <h2 className="headerlabel-title">
                     <a className="headerlabel-title-link" href="#">
-                        CUP's    
+                        CUP's   
                     </a>
                 </h2>
                 
