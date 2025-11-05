@@ -43,3 +43,36 @@
 .headernav-menu-link:hover .headernav-menu-image {
     transform: scale(1.1);
 }
+
+@media (min-width: 2560px) {
+  .headernav-menu-link {
+    font-size: 1.3rem;
+    gap: 10px;
+  }
+  .headernav-menu-image {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .headernav-menu-link {
+    font-size: 1rem;
+  }
+}
+
+/* Смартфоны */
+@media (max-width: 768px) {
+  .headernav-nav {
+    justify-content: flex-end;
+  }
+  .headernav-menu-link {
+    font-size: 0.75rem;
+    padding: 0;
+  }
+  .headernav-menu-image {
+    width: 22px;
+    height: 22px;
+  }
+}

@@ -72,3 +72,21 @@
 
 
  /* HeaderLabel and HeaderSubLabel styles end*/
+
+
+@media (min-width: 2560px) {
+  .headerlabel-title-link { font-size: 2.6rem; }
+  .headerlabel-subtitle { font-size: 1.3rem; }
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .headerlabel-title-link { font-size: 1.8rem; }
+  .headerlabel-subtitle { font-size: 1rem; }
+}
+
+/* Смартфоны */
+@media (max-width: 768px) {
+  .headerlabel-title-link { font-size: 1.2rem; }
+  .headerlabel-subtitle { font-size: 0.5rem; }
+}
