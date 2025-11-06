@@ -1,0 +1,109 @@
+.review-block-banner {
+    width: 100%;
+    min-width: 0;
+    background: #D3BDA4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.review-block-banner__header {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8rem;
+    color: #3C2B17;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.review-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.review-iframe-wrapper {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #F5ECDB;
+}
+
+/* Адаптивность для разных экранов */
+@media (max-width: 1200px) {
+    .review-container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .review-container {
+        max-width: 800px;
+    }
+    
+    .review-iframe-wrapper {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .review-block-banner {
+        padding: 15px;
+    }
+    
+    .review-block-banner__header {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .review-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .review-iframe-wrapper {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-block-banner {
+        padding: 10px;
+    }
+    
+    .review-block-banner__header {
+        font-size: 1.3rem;
+    }
+    
+    .review-iframe-wrapper {
+        height: 300px;
+    }
+}
+
+/* Дополнительные стили для предотвращения выхода за границы */
+.review-block-banner * {
+    box-sizing: border-box;
+}
+
+/* Гарантия, что контент не выходит за пределы viewport */
+.review-block-banner {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.review-iframe-wrapper__iframe {
+    border: 0;
+    background-color: #F5ECDB;
+}

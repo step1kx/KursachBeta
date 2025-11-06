@@ -1,0 +1,440 @@
+@font-face {
+    font-family: 'Zabava';
+    src: url('../../fonts/Zabava_mari_chenak_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===== БАЗОВЫЕ СТИЛИ (Mobile First) ===== */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0;
+    padding: 0;
+    margin-top: 2rem !important; 
+    min-height: calc(60vh - 9.375rem);
+    width: 100%;
+}
+
+/* Стили для блоков banner и gallery */
+.main-block-banner,
+.main-block-gallery {
+    min-width: 0;
+    background: #D3BDA4;
+    padding: 0 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-block-gallery {
+    width: 100%;
+}
+
+.main-block-banner__header,
+.main-block-gallery__header {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    color: #3C2B17;
+    margin: 1.5rem 0 0 0;
+    line-height: 1.2;
+}
+
+.banner-container__outer {
+    width: 100%; 
+    overflow: hidden; 
+    position: relative;
+    margin-bottom: 0.625rem;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+.gallery-container {
+    display: flex;
+    gap: 0.625rem;
+    justify-content: center;
+    margin: 1.875rem 0 2.5rem;
+    flex-wrap: wrap;
+}
+
+.container-mainMenu {
+    max-width: 81.25rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+    background: #F5ECDB;
+    color: #2c1810;
+    border-radius: 0.9375rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 0.625rem;
+    padding-bottom: 1.25rem;
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu-main-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: normal;
+    color: #6B6630;
+    margin: 0;
+    letter-spacing: 0.125rem;
+    line-height: 1.1;
+}
+
+.menu-subtitle {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: #6B6630;
+    margin: -0.3125rem 0 0 0;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+}
+
+/* Верхняя часть - напитки */
+.menu-drinks-section {
+    margin-bottom: 3.75rem;
+}
+
+/* Нижняя часть - еда */
+.menu-food-section {
+    border-top: 0.125rem solid #8b4513;
+    padding-top: 2.5rem;
+}
+
+.menu-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.75rem;
+    align-items: start;
+}
+
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.menu-drinks-section .menu-column {
+    min-height: auto;
+}
+
+.menu-category {
+    break-inside: avoid;
+}
+
+.category-title {
+    font-family: 'Zabava', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    color: #2c1810;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.9375rem;
+    letter-spacing: 0.0625rem;
+    line-height: 1.2;
+}
+
+.category-subtitle {
+    font-size: 1rem;
+    color: #5d4037;
+    margin: -0.625rem 0 0.9375rem 0;
+    font-style: italic;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.item-name {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    flex: 1;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #5D3117;
+    text-align: left;
+    min-width: 8rem;
+}
+
+.item-volume {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    color: #A46A1F;
+    white-space: nowrap;
+    margin-left: 0.25rem;
+}
+
+.item-dots {
+    flex: 1;
+    border-bottom: 0.0625rem dotted #8b4513;
+    margin: 0 0.3125rem;
+    min-width: 1.25rem;
+    position: relative;
+    top: -0.125rem;
+}
+
+.item-price {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #918458;
+    white-space: nowrap;
+}
+
+/* Для больших элементов (завтраки, сэндвичи) */
+.menu-item-large {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    border-bottom: 0.0625rem solid #e0e0e0;
+    gap: 0.5rem;
+}
+
+.item-content {
+    flex: 1;
+    width: 100%;
+}
+
+.item-name-large {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    color: #5D3117;
+    display: block;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.item-description {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    color: #A46A1F;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.item-price-large {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    color: #918458;
+    white-space: nowrap;
+    margin-left: 0;
+    align-self: flex-end;
+}
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media (min-width: 48rem) {
+    .main {
+        margin-top: 4rem !important;
+    }
+    
+    .menu-columns {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.75rem;
+    }
+    
+    .menu-drinks-section .menu-column {
+        min-height: 37.5rem;
+    }
+    
+    .menu-item-large {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .item-price-large {
+        margin-left: 1.25rem;
+        align-self: flex-start;
+    }
+    
+    .menu-item {
+        flex-wrap: nowrap;
+    }
+}
+
+/* ===== LAPTOP (1024px - 1920px) ===== */
+@media (min-width: 1024px) {
+    .container-mainMenu {
+        padding: 2.5rem 2.5rem;
+    }
+    
+    .main-block-gallery {
+        width: 60%;
+    }
+
+
+    
+    .menu-main-title {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+    
+    .menu-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .menu-drinks-section .menu-column:first-child {
+        justify-content: space-between;
+    }
+    
+    .menu-drinks-section .menu-column:last-child {
+        justify-content: space-between;
+    }
+}
+
+/* ===== DESKTOP (1920px - 3840px) ===== */
+@media (min-width: 120rem) {
+    .container-mainMenu {
+        max-width: 90rem;
+        padding: 3rem 4rem;
+    }
+    
+    .menu-main-title {
+        font-size: 5rem;
+        margin-bottom: 20px;
+    }
+    
+    .menu-subtitle {
+        font-size: 1.5rem;
+        letter-spacing: 1rem;
+    }
+    
+    .category-title {
+        font-size: 2.5rem;
+    }
+    
+    .item-name,
+    .item-price {
+        font-size: 1.2rem;
+    }
+    
+    .item-name-large {
+        font-size: 1.3rem;
+    }
+}
+
+/* ===== 4K (3840px+) ===== */
+@media (min-width: 240rem) {
+    .container-mainMenu {
+        max-width: 120rem;
+        padding: 4rem 6rem;
+    }
+    
+    .menu-main-title {
+        font-size: 6rem;
+        margin-bottom: 20px;
+    }
+    
+    .menu-subtitle {
+        font-size: 2rem;
+    }
+    
+    .category-title {
+        font-size: 3rem;
+    }
+    
+    .menu-items {
+        gap: 1rem;
+    }
+}
+
+/* ===== Мелкие исправления для мобилок ===== */
+@media (max-width: 30rem) {
+    .container-mainMenu {
+        padding: 1.25rem 0.9375rem;
+        border-radius: 0.625rem;
+    }
+
+    .menu-main-title {
+        margin-bottom: 20px;
+    }
+    
+    .menu-header {
+        margin-bottom: 0.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    .menu-drinks-section {
+        margin-bottom: 2.5rem;
+    }
+    
+    .menu-food-section {
+        padding-top: 1.5rem;
+    }
+    
+    .menu-column {
+        gap: 2rem;
+    }
+
+    .menu-item {
+        flex-wrap: nowrap;
+    }
+    
+    .item-name {
+        min-width: 6rem;
+    }
+    
+    .item-dots {
+        min-width: 0.625rem;
+        flex: 0.5;
+    }
+}
+
+/* ===== Портретные мобилки ===== */
+@media (max-width: 25rem) and (orientation: portrait) {
+    .container-mainMenu {
+        padding: 1rem 0.75rem;
+    }
+    
+    .menu-main-title {
+        font-size: 2rem;
+    }
+    
+    .menu-subtitle {
+        letter-spacing: 0.25rem;
+    }
+    
+    .menu-item {
+        gap: 0.25rem;
+    }
+}

@@ -1,0 +1,33 @@
+/* Video styles*/
+
+.video-container {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+}
+
+
+.video-wrapper {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Адаптивность */
+@media (max-width: 1024px) {   
+    .video-container {
+        width: 100%;
+        height: 400px;
+    }
+}
