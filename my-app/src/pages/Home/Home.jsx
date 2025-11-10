@@ -21,7 +21,7 @@ function Home() {
                 <MainMenu/>
                 <div className="main-top-column">
                     <MapBlock/>
-                    <DessertBlock/>
+                    {/* <DessertBlock/> */}
                     <ReviewsBlock/>
                 </div>
             </div>
