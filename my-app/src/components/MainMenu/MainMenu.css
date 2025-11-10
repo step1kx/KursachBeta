@@ -293,7 +293,7 @@
 }
 
 /* ===== LAPTOP (1024px - 1920px) ===== */
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
     .container-mainMenu {
         padding: 2.5rem 2.5rem;
     }
@@ -301,9 +301,12 @@
     .main-block-gallery {
         width: 60%;
     }
+
+
     
     .menu-main-title {
         font-size: 4rem;
+        margin-bottom: 20px;
     }
     
     .menu-subtitle {
@@ -328,6 +331,7 @@
     
     .menu-main-title {
         font-size: 5rem;
+        margin-bottom: 20px;
     }
     
     .menu-subtitle {
@@ -358,6 +362,7 @@
     
     .menu-main-title {
         font-size: 6rem;
+        margin-bottom: 20px;
     }
     
     .menu-subtitle {
@@ -379,6 +384,10 @@
         padding: 1.25rem 0.9375rem;
         border-radius: 0.625rem;
     }
+
+    .menu-main-title {
+        margin-bottom: 20px;
+    }
     
     .menu-header {
         margin-bottom: 0.5rem;
@@ -395,6 +404,10 @@
     
     .menu-column {
         gap: 2rem;
+    }
+
+    .menu-item {
+        flex-wrap: nowrap;
     }
     
     .item-name {

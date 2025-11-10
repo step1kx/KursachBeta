@@ -87,6 +87,15 @@
 
 /* Смартфоны */
 @media (max-width: 768px) {
-  .headerlabel-title-link { font-size: 1.2rem; }
-  .headerlabel-subtitle { font-size: 0.5rem; }
+  .headerlabel-title-link 
+  { 
+    font-size: 1.2rem; 
+  }
+  .headerlabel-subtitle 
+  { 
+        opacity: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 0.5rem; 
+  }
 }
