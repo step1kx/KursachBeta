@@ -1,3 +1,11 @@
 .menulink-block {
-    margin-top: 30px;
+    margin-top: 50px;
+}
+
+.menulink-block__header {
+    margin: 80px 0 0 0;
+    text-align: center;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 30px;
+    color: #6B6630;
 }

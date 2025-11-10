@@ -114,10 +114,10 @@
 }
 
 /* Нижняя часть - еда */
-.menu-food-section {
+/* .menu-food-section {
     border-top: 0.125rem solid #8b4513;
     padding-top: 2.5rem;
-}
+} */
 
 .menu-columns {
     display: grid;

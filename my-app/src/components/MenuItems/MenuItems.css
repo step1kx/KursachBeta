@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
+    margin: 0 20px 0 20px;
 }
 
 .menu-category {
@@ -16,8 +17,9 @@
     font-size: 28px;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
+    border-bottom: 2px solid rgba(139, 69, 19, 0.3); /* #8b4513 с прозрачностью */
+    color: #2c1810; /* Темно-коричневый как в основном меню */
+    font-family: 'Zabava', sans-serif; /* Добавил шрифт для консистентности */
 }
 
 .menu-items-grid {
@@ -27,16 +29,18 @@
 
 .menu-item-card,
 .menu-item-card-large {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(245, 236, 219, 0.8); /* Полупрозрачный F5ECDB */
     border-radius: 12px;
     padding: 15px;
     transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(211, 189, 164, 0.5); /* Тонкая граница D3BDA4 */
 }
 
 .menu-item-card:hover,
 .menu-item-card-large:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(245, 236, 219, 0.95); /* Менее прозрачный при ховере */
+    box-shadow: 0 4px 12px rgba(60, 43, 23, 0.15); /* Тень в тон #3C2B17 */
 }
 
 .menu-item-card {
@@ -57,6 +61,7 @@
     border-radius: 8px;
     overflow: hidden;
     flex-shrink: 0;
+    border: 2px solid #D3BDA4; /* Граница как в основном дизайне */
 }
 
 .menu-item-card-large .item-image {
@@ -79,21 +84,24 @@
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 5px;
-    color: var(--text-color);
+    color: #5D3117; /* Коричневый как в основном меню */
+    font-family: "Dela Gothic One", sans-serif; /* Консистентность шрифтов */
 }
 
 .item-name-large {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--text-color);
+    color: #5D3117; /* Коричневый как в основном меню */
+    font-family: "Dela Gothic One", sans-serif;
 }
 
 .item-description {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #A46A1F; /* Золотисто-коричневый как в основном меню */
     margin-bottom: 10px;
     line-height: 1.4;
+    font-family: "Dela Gothic One", sans-serif;
 }
 
 .item-details {
@@ -105,24 +113,43 @@
 
 .item-volume {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #A46A1F; /* Золотисто-коричневый */
+    font-family: "Dela Gothic One", sans-serif;
 }
 
 .item-dots {
     flex: 1;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+    border-bottom: 1px dotted #8b4513; /* Коричневые точки как в основном меню */
     margin: 0 10px;
 }
 
 .item-price,
 .item-price-large {
     font-weight: 600;
-    color: var(--accent-color);
+    color: #918458; /* Золотистый как в основном меню */
     font-size: 16px;
+    font-family: "Dela Gothic One", sans-serif;
 }
 
 .item-price-large {
     font-size: 18px;
+    margin: 0;
+}
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #5D3117
+}
+
+.no-results h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.no-results p {
+    font-size: 16px;
 }
 
 /* Адаптивность */

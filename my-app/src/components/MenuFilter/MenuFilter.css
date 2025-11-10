@@ -1,14 +1,18 @@
 .menu-filter {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(245, 236, 219, 0.8); /* Полупрозрачный F5ECDB */
+    border-radius: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(211, 189, 164, 0.5);
     padding: 20px;
     border-radius: 12px;
-    margin-bottom: 30px;
+    margin: 15px;
 }
 
 .filter-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: var(--text-color);
+    font-size: 20px;
+    margin: 0;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #2c1810;
 }
 
 .filter-group {
@@ -19,7 +23,9 @@
     display: block;
     margin-bottom: 5px;
     font-weight: 500;
+    font-size: 14px;
     color: var(--text-color);
+    font-family: "Dela Gothic One", sans-serif;
 }
 
 .filter-select {
@@ -38,19 +44,20 @@
 }
 
 .clear-filters-btn {
-    width: 100%;
-    padding: 10px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 6px;
-    color: var(--text-color);
+    background: #3C2B17;
+    color: #F5ECDB;
+    border: none;
+    padding: 10px 20px;
+    font-family: "Dela Gothic One", sans-serif;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
     cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
     transition: all 0.3s ease;
 }
 
-.clear-filters-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
 
 @media (min-width: 768px) {
     .menu-filter {

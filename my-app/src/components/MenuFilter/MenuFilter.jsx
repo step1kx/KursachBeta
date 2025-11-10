@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MenuFilter.css';
 
-function MenuFilter() {
-    const [filters, setFilters] = useState({
-        category: 'all',
-        priceRange: 'all',
-        volume: 'all'
-    });
-
+function MenuFilter({ filters, onFilterChange, onClearFilters }) {
     const categories = [
         { value: 'all', label: 'Все категории' },
         { value: 'coffee', label: 'Кофе' },
@@ -35,17 +29,9 @@ function MenuFilter() {
     ];
 
     const handleFilterChange = (filterType, value) => {
-        setFilters(prev => ({
-            ...prev,
+        onFilterChange({
+            ...filters,
             [filterType]: value
-        }));
-    };
-
-    const clearFilters = () => {
-        setFilters({
-            category: 'all',
-            priceRange: 'all',
-            volume: 'all'
         });
     };
 
@@ -98,7 +84,7 @@ function MenuFilter() {
                 </select>
             </div>
 
-            <button className="clear-filters-btn" onClick={clearFilters}>
+            <button className="clear-filters-btn" onClick={onClearFilters}>
                 Сбросить фильтры
             </button>
         </div>
