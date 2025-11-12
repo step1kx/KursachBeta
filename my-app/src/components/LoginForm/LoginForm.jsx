@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
 
-function LoginForm() {
+import cupsInsta from "../../assets/cupsInsta.png";
+import cupsTikTok from "../../assets/cupsTikTok.png";
+import cupsLoginPhoto from "../../assets/cupsLoginPhoto.jpg";
+
+function LoginForm({ onSwitchToRegister }) {
     const [formData, setFormData] = useState({
         login: '',
         password: ''
@@ -22,7 +26,6 @@ function LoginForm() {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Имитация входа
         try {
             await new Promise(resolve => setTimeout(resolve, 1000));
             console.log('Данные для входа:', formData);
@@ -59,62 +62,85 @@ function LoginForm() {
     }
 
     return (
-        <div className="login-page-wrapper">
-            <div className="login-form-container">
-                <div className="login-form-header">
-                    <h2 className="form-title">Вход в аккаунт</h2>
-                    <p className="form-subtitle">Войдите в свой аккаунт чтобы продолжить</p>
+            <div className="login-layout">
+                {/* Блок социальных сетей СЛЕВА */}
+                <div className="social-sidebar">
+                    <div className="cups-brand">
+                        <h1 className="cups-title">CUP's</h1>
+                        <p className="cups-subtitle">coffee bar</p>
+                    </div>
+                    
+                    <div className="cups-image">
+                        <img 
+                            src={cupsLoginPhoto} 
+                            alt="CUP's Coffee Bar" 
+                            className="cups-photo"
+                        />
+                    </div>
+                    
+                    <div className="social-section">
+                        <p className="social-text">Переходите в наши соцсети</p>
+                        <div className="social-icons">
+                            <a href="#" className="social-link">
+                                <img src={cupsInsta} alt="Instagram" className="social-icon" />
+                            </a>
+                            <a href="#" className="social-link">
+                                <img src={cupsTikTok} alt="TikTok" className="social-icon" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <form className="login-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="login" className="form-label">
-                            Email или номер телефона *
-                        </label>
-                        <input
-                            type="text"
-                            id="login"
-                            name="login"
-                            value={formData.login}
-                            onChange={handleChange}
-                            className="form-input"
-                            placeholder="example@mail.com или +375 (XX) XXX-XX-XX"
-                            required
-                        />
+                {/* Форма входа СПРАВА */}
+                <div className="login-form-container">
+                    <div className="login-form-header">
+                        <h2 className="form-title">Вход в аккаунт</h2>
+                        <p className="form-subtitle">Войдите в свой аккаунт чтобы продолжить</p>
                     </div>
 
-                    <div className="form-group">
-                        <label htmlFor="password" className="form-label">
-                            Пароль *
-                        </label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            className="form-input"
-                            placeholder="Введите ваш пароль"
-                            required
-                        />
-                    </div>
+                    <form className="login-form" onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label htmlFor="login" className="form-label">
+                                Email или номер телефона *
+                            </label>
+                            <input
+                                type="text"
+                                id="login"
+                                name="login"
+                                value={formData.login}
+                                onChange={handleChange}
+                                className="form-input"
+                                placeholder="example@mail.com или +375 (XX) XXX-XX-XX"
+                                required
+                            />
+                        </div>
 
-                    <button 
-                        type="submit" 
-                        className="submit-btn"
-                        disabled={isSubmitting}
-                    >
-                        {isSubmitting ? 'Вход...' : 'Войти'}
-                    </button>
+                        <div className="form-group">
+                            <label htmlFor="password" className="form-label">
+                                Пароль *
+                            </label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                className="form-input"
+                                placeholder="Введите ваш пароль"
+                                required
+                            />
+                        </div>
 
-                    <div className="register-link">
-                        <p>
-                            Еще нет аккаунта? <a href="/register" className="register-link-text">Зарегистрироваться</a>
-                        </p>
-                    </div>
-                </form>
+                        <button 
+                            type="submit" 
+                            className="submit-btn"
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? 'Вход...' : 'Войти'}
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div>
     );
 }
 

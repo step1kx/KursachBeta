@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import MenuLink from './pages/MenuLink';
 import ScrollToTop from './usefulFeatures/ScrollToTop';
 import SupportLink from './pages/SupportLink'
-import LoginForm from './components/LoginForm/LoginForm';
+import LoginLink from './pages/LoginLink';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<MenuLink />} />
           <Route path="/support" element={<SupportLink/>} />
-          <Route path="/login" element={<LoginForm/>}/>
+          <Route path="/login" element={<LoginLink/>}/>
         </Routes>
       </div>
     </Router>

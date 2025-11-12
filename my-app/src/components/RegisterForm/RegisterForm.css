@@ -1,20 +1,148 @@
 
 
-.login-layout {
+.register-layout {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
-    max-width: 9000px;
+    max-width: 900px;
     width: 100%;
     align-items: stretch;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(60, 43, 23, 0.2);
+    min-height: 450px; 
+    height: auto;
+}
+
+/* Форма регистрации СЛЕВА */
+.register-form-container {
+    background: rgba(245, 236, 219, 0.95);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 450px;
     height: auto;
 }
 
-/* Блок социальных сетей СЛЕВА */
+.register-form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-title {
+    font-family: "Dela Gothic One", sans-serif;
+    color: #6B6630;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-subtitle {
+    font-family: "Dela Gothic One", sans-serif;
+    color: #6B6630;
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-family: "Dela Gothic One", sans-serif;
+    color: #2c1810;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-input {
+    padding: 14px 16px;
+    border: 1px solid rgba(211, 189, 164, 0.5);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c1810;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #d3bda4;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 3px rgba(211, 189, 164, 0.2);
+}
+
+.form-input::placeholder {
+    color: #a89b8a;
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+.form-input.error {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.05);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+.submit-btn {
+    background: #3C2B17;
+    color: #F5ECDB;
+    border: none;
+    padding: 16px 20px;
+    font-family: "Dela Gothic One", sans-serif;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #2d2112;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(60, 43, 23, 0.3);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    background: #a89b8a;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-btn.success {
+    background: #6B6630;
+}
+
+.submit-btn.success:hover {
+    background: #6B6634;
+}
+
+/* Блок социальных сетей СПРАВА */
 .social-sidebar {
     background: #6B6630;
     padding: 30px 25px;
@@ -105,123 +233,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Форма входа СПРАВА */
-.login-form-container {
-    background: rgba(245, 236, 219, 0.95);
-    padding: 30px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 450px;
-    height: auto;
-}
-
-.login-form-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-title {
-    font-family: "Dela Gothic One", sans-serif;
-    color: #6B6630;
-    font-size: 28px;
-    margin-top: 0px;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.form-subtitle {
-    font-family: "Dela Gothic One", sans-serif;
-    color: #6B6630;
-    font-size: 16px;
-    margin: 0;
-    opacity: 0.8;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-label {
-    font-family: "Dela Gothic One", sans-serif;
-    color: #2c1810;
-    font-size: 14px;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.form-input {
-    padding: 14px 16px;
-    border: 1px solid rgba(211, 189, 164, 0.5);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #2c1810;
-    font-family: "Dela Gothic One", sans-serif;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.form-input:focus {
-    outline: none;
-    border-color: #d3bda4;
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 0 3px rgba(211, 189, 164, 0.2);
-}
-
-.form-input::placeholder {
-    color: #a89b8a;
-    font-family: "Dela Gothic One", sans-serif;
-}
-
-.submit-btn {
-    background: #3C2B17;
-    color: #F5ECDB;
-    border: none;
-    padding: 16px 20px;
-    font-family: "Dela Gothic One", sans-serif;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.submit-btn:hover:not(:disabled) {
-    background: #2d2112;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(60, 43, 23, 0.3);
-}
-
-.submit-btn:active:not(:disabled) {
-    transform: translateY(0);
-}
-
-.submit-btn:disabled {
-    background: #a89b8a;
-    cursor: not-allowed;
-    transform: none;
-}
-
-.submit-btn.success {
-    background: #6B6630;
-}
-
-.submit-btn.success:hover {
-    background: #6B6634;
-}
-
-/* Сообщение об успешном входе */
+/* Сообщение об успешной регистрации */
 .success-message {
     text-align: center;
     padding: 20px;
@@ -242,31 +254,20 @@
     line-height: 1.5;
 }
 
-/* Валидация */
-.form-input:invalid:not(:focus):not(:placeholder-shown) {
-    border-color: #e74c3c;
-    background: rgba(231, 76, 60, 0.05);
-}
-
-.form-input:valid:not(:focus):not(:placeholder-shown) {
-    border-color: #6B6630;
-    background: rgba(39, 174, 96, 0.05);
-}
-
 /* Адаптивность для планшетов и десктопов */
 @media (min-width: 768px) {
-    .login-layout {
+    .register-layout {
         grid-template-columns: 1fr 1fr;
     }
     
     .social-sidebar {
         padding: 50px 40px;
-        order: 1;
+        order: 2;
     }
     
-    .login-form-container {
+    .register-form-container {
         padding: 50px 40px;
-        order: 2;
+        order: 1;
     }
     
     .cups-title {
@@ -279,7 +280,7 @@
 }
 
 @media (min-width: 1024px) {
-    .login-layout {
+    .register-layout {
         max-width: 1000px;
     }
     
@@ -287,7 +288,7 @@
         padding: 60px 50px;
     }
     
-    .login-form-container {
+    .register-form-container {
         padding: 60px 50px;
     }
     
@@ -307,11 +308,11 @@
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 767px) {
-    .login-page-wrapper {
+    .register-page-wrapper {
         padding: 15px;
     }
     
-    .login-layout {
+    .register-layout {
         border-radius: 12px;
         min-height: auto;
     }
@@ -319,15 +320,15 @@
     .social-sidebar {
         padding: 30px 25px;
         min-height: 400px;
-        border-radius: 12px 12px 0 0;
-        order: 1;
-    }
-    
-    .login-form-container {
-        padding: 30px 25px;
-        min-height: 400px;
         border-radius: 0 0 12px 12px;
         order: 2;
+    }
+    
+    .register-form-container {
+        padding: 30px 25px;
+        min-height: 500px;
+        border-radius: 12px 12px 0 0;
+        order: 1;
     }
     
     .cups-title {
@@ -359,42 +360,42 @@
 }
 
 @media (max-width: 480px) {
-    .login-page-wrapper {
+    .register-page-wrapper {
         padding: 10px;
     }
     
     .social-sidebar {
-        padding: 20px 15px;
-        min-height: 300px;
+        padding: 25px 20px;
+        min-height: 350px;
     }
     
-    .login-form-container {
-        padding: 20px 15px;
-        min-height: 300px;
+    .register-form-container {
+        padding: 25px 20px;
+        min-height: 550px;
     }
     
     .cups-title {
-        font-size: 28px;
+        font-size: 32px;
     }
     
     .cups-subtitle {
-        font-size: 12px;
-        letter-spacing: 3px;
+        font-size: 14px;
+        letter-spacing: 4px;
     }
     
     .cups-photo {
-        height: 100px;
+        height: 150px;
     }
     
     .form-title {
-        font-size: 20px;
+        font-size: 22px;
     }
     
     .form-subtitle {
         font-size: 14px;
     }
     
-    .login-form {
+    .register-form {
         gap: 15px;
     }
     
