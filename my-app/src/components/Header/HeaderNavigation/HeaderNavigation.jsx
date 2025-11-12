@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import backetIcon from '../../../assets/Group.png';
 import './HeaderNavigation.css';
 
@@ -6,10 +7,10 @@ function HeaderNavigation() {
     return (
         <nav className="headernav-nav">
             <button className="headernav-menu-button">
-                <a className="headernav-menu-link" href='#'>
+                <Link className="headernav-menu-link" to="/login">
                     Войти
                     <img src={backetIcon} alt="Иконка профиля" className="headernav-menu-image"></img>
-                </a>
+                </Link>
             </button>
         </nav>
     );

@@ -5,17 +5,19 @@ import Home from './pages/Home';
 import MenuLink from './pages/MenuLink';
 import ScrollToTop from './usefulFeatures/ScrollToTop';
 import SupportLink from './pages/SupportLink'
+import LoginForm from './components/LoginForm/LoginForm';
 
 function App() {
   return (
     <Router>
       <div className="App">
          <ScrollToTop/>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<MenuLink />} />
           <Route path="/support" element={<SupportLink/>} />
+          <Route path="/login" element={<LoginForm/>}/>
         </Routes>
       </div>
     </Router>

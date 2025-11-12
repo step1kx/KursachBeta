@@ -6,11 +6,13 @@ import MainMenu from '../../components/MainMenu';
 import MapBlock from '../../components/MapBlock';
 import DessertBlock from '../../components/DessertBlock';
 import ReviewsBlock from '../../components/ReviewsBlock';
+import Header from '../../components/Header';
 import './Home.css';
 
 function Home() {
     return (
         <>
+        <Header/>
             <div className="main">
                 <div className="main-content-row">
                     <MainPhotoSlider/>
