@@ -294,9 +294,6 @@
 
 /* ===== LAPTOP (1024px - 1920px) ===== */
 @media (min-width: 1024px) {
-    .container-mainMenu {
-        padding: 2.5rem 2.5rem;
-    }
     
     .main-block-gallery {
         width: 60%;

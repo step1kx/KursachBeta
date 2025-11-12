@@ -12,8 +12,35 @@
     margin: 0;
 }
 
-.headernav-menu-item {
-    margin-left: 20px;
+
+.headernav-menu-button {
+    background: #6B6630;
+    border: none;
+    padding: 0px 5px;
+    font-family: "Dela Gothic One", sans-serif;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+.headernav-menu-button:hover:not(:disabled) {
+     background: #ADA86D;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(60, 43, 23, 0.3);
+}
+
+.headernav-menu-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.headernav-menu-button:disabled {
+    background: #a89b8a;
+    cursor: not-allowed;
+    transform: none;
 }
 
 .headernav-menu-link {
@@ -21,16 +48,15 @@
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: #6B6630;
+    color: #F6F5EC;
     font-size: 1rem;
-    font-weight: bold;
     transition: color 0.3s ease;
     text-align: center;
     padding: 8px 12px;
 }
 
 .headernav-menu-link:hover {
-    color: #ADA86D;
+    color: #FBEACC;
 }
 
 .headernav-menu-image {

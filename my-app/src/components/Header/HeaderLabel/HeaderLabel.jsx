@@ -18,12 +18,14 @@ function HeaderLabel() {
                         <Link className='dropdown-item-link' to='/menu'>Меню</Link>
                     </div>
                     <div className="dropdown-item"><a className='dropdown-item-link' href='#'>Товары</a></div>
-                    <div className="dropdown-item"><a className='dropdown-item-link' href='#'>Местоположение</a></div>
+                    {/* <div className="dropdown-item"><a className='dropdown-item-link' href='#'>Местоположение</a></div>
                     <div className="dropdown-item"><a className='dropdown-item-link' href='#'>График работы</a></div>
-                    <div className="dropdown-item"><a className='dropdown-item-link' href='#'>Отзывы</a></div>
+                    <div className="dropdown-item"><a className='dropdown-item-link' href='#'>Контакты</a></div> */}
                     <div className="dropdown-item"><a className='dropdown-item-link' href='#'>О нас</a></div>
-                    <div className="dropdown-item"><a className='dropdown-item-link' href='#'>Контакты</a></div>
-                    <div className="dropdown-item"><a className='dropdown-item-link' href='#'>Служба поддержки</a></div>
+                    {/* <div className="dropdown-item"><a className='dropdown-item-link' href='#'>Ваши отзывы</a></div> */}
+                    <div className="dropdown-item">
+                        <Link className='dropdown-item-link' to='/support'>Служба поддержки</Link>
+                    </div>
                 </div>
             </div>
             <h3 className="headerlabel-subtitle">coffee bar</h3>
