@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import backetIcon from '../../../assets/Group.png';
+import backetIcon from '../../../assets/codicon_account.png';
 import './HeaderNavigation.css';
 
 function HeaderNavigation() {

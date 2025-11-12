@@ -13,8 +13,8 @@
     justify-content: space-evenly;
     gap: 0;
     padding: 0;
-    margin-top: 2rem !important; 
-    min-height: calc(60vh - 9.375rem);
+    margin-top: 32px !important; 
+    min-height: calc(60vh - 150px);
     width: 100%;
 }
 
@@ -23,7 +23,7 @@
 .main-block-gallery {
     min-width: 0;
     background: #D3BDA4;
-    padding: 0 1.25rem 1.25rem;
+    padding: 0 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,9 +41,9 @@
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    font-size: 24px;
     color: #3C2B17;
-    margin: 1.5rem 0 0 0;
+    margin: 24px 0 0 0;
     line-height: 1.2;
 }
 
@@ -51,7 +51,7 @@
     width: 100%; 
     overflow: hidden; 
     position: relative;
-    margin-bottom: 0.625rem;
+    margin-bottom: 10px;
 }
 
 @keyframes scroll {
@@ -65,373 +65,411 @@
 
 .gallery-container {
     display: flex;
-    gap: 0.625rem;
+    gap: 10px;
     justify-content: center;
-    margin: 1.875rem 0 2.5rem;
+    margin: 30px 0 40px;
     flex-wrap: wrap;
 }
 
-.container-mainMenu {
-    max-width: 81.25rem;
+.main-menu-container {
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 2.5rem 1.25rem;
+    padding: 40px 20px;
     background: #F5ECDB;
     color: #2c1810;
-    border-radius: 0.9375rem;
+    border-radius: 15px;
     width: 100%;
     box-sizing: border-box;
 }
 
-.menu-header {
+.main-menu-header {
     text-align: center;
-    margin-bottom: 0.625rem;
-    padding-bottom: 1.25rem;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.menu-main-title {
-    font-size: clamp(2.5rem, 8vw, 4rem);
+.main-menu-title {
+    font-size: 40px;
     font-weight: normal;
     color: #6B6630;
     margin: 0;
-    letter-spacing: 0.125rem;
+    letter-spacing: 2px;
     line-height: 1.1;
 }
 
-.menu-subtitle {
-    font-size: clamp(1rem, 3vw, 1.3rem);
+.main-menu-subtitle {
+    font-size: 16px;
     color: #6B6630;
-    margin: -0.3125rem 0 0 0;
-    letter-spacing: 0.5rem;
+    margin: -5px 0 0 0;
+    letter-spacing: 8px;
     font-weight: bold;
 }
 
 /* Верхняя часть - напитки */
-.menu-drinks-section {
-    margin-bottom: 3.75rem;
+.main-menu-drinks-section {
+    margin-bottom: 60px;
 }
 
 /* Нижняя часть - еда */
-/* .menu-food-section {
-    border-top: 0.125rem solid #8b4513;
-    padding-top: 2.5rem;
-} */
+.main-menu-food-section {
+    border-top: 2px solid #8b4513;
+    padding-top: 40px;
+}
 
-.menu-columns {
+.main-menu-columns {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3.75rem;
+    gap: 60px;
     align-items: start;
 }
 
-.menu-column {
+.main-menu-column {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 40px;
 }
 
-.menu-drinks-section .menu-column {
+.main-menu-drinks-section .main-menu-column {
     min-height: auto;
 }
 
-.menu-category {
+.main-menu-category {
     break-inside: avoid;
 }
 
-.category-title {
+.main-menu-category-title {
     font-family: 'Zabava', sans-serif;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: 24px;
     font-weight: bold;
     color: #2c1810;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.9375rem;
-    letter-spacing: 0.0625rem;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
     line-height: 1.2;
+    border-bottom: 2px solid rgba(139, 69, 19, 0.3);
 }
 
-.category-subtitle {
-    font-size: 1rem;
-    color: #5d4037;
-    margin: -0.625rem 0 0.9375rem 0;
-    font-style: italic;
-}
-
-.menu-items {
+.main-menu-items {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
-.menu-item {
+.main-menu-item {
     display: flex;
     align-items: baseline;
-    gap: 0.5rem;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
-.item-name {
+.main-menu-item-name {
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
     flex: 1;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: 16px;
     color: #5D3117;
     text-align: left;
-    min-width: 8rem;
+    min-width: 120px;
 }
 
-.item-volume {
+.main-menu-item-volume {
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal; 
-    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    font-size: 14px;
     color: #A46A1F;
     white-space: nowrap;
-    margin-left: 0.25rem;
+    margin-left: 4px;
 }
 
-.item-dots {
+.main-menu-item-dots {
     flex: 1;
-    border-bottom: 0.0625rem dotted #8b4513;
-    margin: 0 0.3125rem;
-    min-width: 1.25rem;
+    border-bottom: 1px dotted #8b4513;
+    margin: 0 5px;
+    min-width: 20px;
     position: relative;
-    top: -0.125rem;
+    top: -2px;
 }
 
-.item-price {
+.main-menu-item-price {
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: 16px;
     color: #918458;
     white-space: nowrap;
 }
 
 /* Для больших элементов (завтраки, сэндвичи) */
-.menu-item-large {
+.main-menu-item-large {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 0.9375rem;
-    padding-bottom: 0.9375rem;
-    border-bottom: 0.0625rem solid #e0e0e0;
-    gap: 0.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 8px;
 }
 
-.item-content {
+.main-menu-item-content {
     flex: 1;
     width: 100%;
 }
 
-.item-name-large {
+.main-menu-item-name-large {
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-size: 18px;
     color: #5D3117;
     display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 4px;
     text-transform: uppercase;
     text-align: left;
     line-height: 1.2;
 }
 
-.item-description {
+.main-menu-item-description {
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
     display: block;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-size: 14px;
     color: #A46A1F;
     text-align: left;
     line-height: 1.4;
 }
 
-.item-price-large {
+.main-menu-item-price-large {
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-size: 18px;
     color: #918458;
     white-space: nowrap;
     margin-left: 0;
     align-self: flex-end;
 }
 
+/* ===== MOBILE (320px - 480px) ===== */
+@media (max-width: 480px) {
+    .main-menu-container {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .main-menu-title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    
+    .main-menu-header {
+        margin-bottom: 8px;
+        padding-bottom: 16px;
+    }
+    
+    .main-menu-drinks-section {
+        margin-bottom: 40px;
+    }
+    
+    .main-menu-food-section {
+        padding-top: 24px;
+    }
+    
+    .main-menu-column {
+        gap: 32px;
+    }
+
+    .main-menu-item {
+        flex-wrap: nowrap;
+    }
+    
+    .main-menu-item-name {
+        min-width: 100px;
+        font-size: 14px;
+    }
+    
+    .main-menu-item-dots {
+        min-width: 10px;
+        flex: 0.5;
+    }
+    
+    .main-menu-item-volume {
+        font-size: 12px;
+    }
+    
+    .main-menu-item-price {
+        font-size: 14px;
+    }
+    
+    .main-menu-category-title {
+        font-size: 20px;
+    }
+}
+
 /* ===== TABLET (768px - 1024px) ===== */
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
     .main {
-        margin-top: 4rem !important;
+        margin-top: 64px !important;
     }
     
-    .menu-columns {
+    .main-menu-columns {
         grid-template-columns: 1fr 1fr;
-        gap: 3.75rem;
+        gap: 60px;
     }
     
-    .menu-drinks-section .menu-column {
-        min-height: 37.5rem;
+    .main-menu-drinks-section .main-menu-column {
+        min-height: 600px;
     }
     
-    .menu-item-large {
+    .main-menu-item-large {
         flex-direction: row;
         align-items: flex-start;
     }
     
-    .item-price-large {
-        margin-left: 1.25rem;
+    .main-menu-item-price-large {
+        margin-left: 20px;
         align-self: flex-start;
     }
     
-    .menu-item {
+    .main-menu-item {
         flex-wrap: nowrap;
+    }
+    
+    .main-menu-title {
+        font-size: 48px;
+    }
+    
+    .main-menu-subtitle {
+        font-size: 18px;
     }
 }
 
-/* ===== LAPTOP (1024px - 1920px) ===== */
+/* ===== LAPTOP (1024px - 1440px) ===== */
 @media (min-width: 1024px) {
-    
     .main-block-gallery {
         width: 60%;
     }
-
-
     
-    .menu-main-title {
-        font-size: 4rem;
+    .main-menu-title {
+        font-size: 64px;
         margin-bottom: 20px;
     }
     
-    .menu-subtitle {
-        font-size: 1.3rem;
+    .main-menu-subtitle {
+        font-size: 20px;
     }
     
-    .menu-drinks-section .menu-column:first-child {
+    .main-menu-drinks-section .main-menu-column:first-child {
         justify-content: space-between;
     }
     
-    .menu-drinks-section .menu-column:last-child {
+    .main-menu-drinks-section .main-menu-column:last-child {
         justify-content: space-between;
     }
-}
-
-/* ===== DESKTOP (1920px - 3840px) ===== */
-@media (min-width: 120rem) {
-    .container-mainMenu {
-        max-width: 90rem;
-        padding: 3rem 4rem;
-    }
     
-    .menu-main-title {
-        font-size: 5rem;
-        margin-bottom: 20px;
-    }
-    
-    .menu-subtitle {
-        font-size: 1.5rem;
-        letter-spacing: 1rem;
-    }
-    
-    .category-title {
-        font-size: 2.5rem;
-    }
-    
-    .item-name,
-    .item-price {
-        font-size: 1.2rem;
-    }
-    
-    .item-name-large {
-        font-size: 1.3rem;
+    .main-menu-container {
+        padding: 50px 40px;
     }
 }
 
-/* ===== 4K (3840px+) ===== */
-@media (min-width: 240rem) {
-    .container-mainMenu {
-        max-width: 120rem;
-        padding: 4rem 6rem;
+/* ===== DESKTOP (1440px - 1920px) ===== */
+@media (min-width: 1440px) {
+    .main-menu-container {
+        max-width: 1400px;
+        /* padding: 60px 80px; */
     }
     
-    .menu-main-title {
-        font-size: 6rem;
-        margin-bottom: 20px;
+    .main-menu-title {
+        font-size: 80px;
     }
     
-    .menu-subtitle {
-        font-size: 2rem;
+    .main-menu-subtitle {
+        font-size: 24px;
+        letter-spacing: 12px;
     }
     
-    .category-title {
-        font-size: 3rem;
+    .main-menu-category-title {
+        font-size: 28px;
     }
     
-    .menu-items {
-        gap: 1rem;
+    .main-menu-item-name,
+    .main-menu-item-price {
+        font-size: 18px;
+    }
+    
+    .main-menu-item-name-large {
+        font-size: 20px;
+    }
+    
+    .main-menu-item-price-large {
+        font-size: 20px;
     }
 }
 
-/* ===== Мелкие исправления для мобилок ===== */
-@media (max-width: 30rem) {
-    .container-mainMenu {
-        padding: 1.25rem 0.9375rem;
-        border-radius: 0.625rem;
-    }
-
-    .menu-main-title {
-        margin-bottom: 20px;
+/* ===== LARGE DESKTOP (1920px+) ===== */
+@media (min-width: 1920px) {
+    .main-menu-container {
+        max-width: 1600px;
+        padding: 80px 100px;
     }
     
-    .menu-header {
-        margin-bottom: 0.5rem;
-        padding-bottom: 1rem;
+    .main-menu-title {
+        font-size: 96px;
     }
     
-    .menu-drinks-section {
-        margin-bottom: 2.5rem;
+    .main-menu-subtitle {
+        font-size: 28px;
     }
     
-    .menu-food-section {
-        padding-top: 1.5rem;
+    .main-menu-category-title {
+        font-size: 32px;
     }
     
-    .menu-column {
-        gap: 2rem;
-    }
-
-    .menu-item {
-        flex-wrap: nowrap;
+    .main-menu-items {
+        gap: 12px;
     }
     
-    .item-name {
-        min-width: 6rem;
+    .main-menu-item-name,
+    .main-menu-item-price {
+        font-size: 20px;
     }
     
-    .item-dots {
-        min-width: 0.625rem;
-        flex: 0.5;
+    .main-menu-item-name-large {
+        font-size: 24px;
+    }
+    
+    .main-menu-item-price-large {
+        font-size: 24px;
     }
 }
 
-/* ===== Портретные мобилки ===== */
-@media (max-width: 25rem) and (orientation: portrait) {
-    .container-mainMenu {
-        padding: 1rem 0.75rem;
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ ===== */
+@media (max-width: 320px) {
+    .main-menu-container {
+        padding: 16px 12px;
     }
     
-    .menu-main-title {
-        font-size: 2rem;
+    .main-menu-title {
+        font-size: 28px;
     }
     
-    .menu-subtitle {
-        letter-spacing: 0.25rem;
+    .main-menu-subtitle {
+        letter-spacing: 4px;
+        font-size: 14px;
     }
     
-    .menu-item {
-        gap: 0.25rem;
+    .main-menu-item {
+        gap: 4px;
+    }
+    
+    .main-menu-item-name {
+        min-width: 80px;
+        font-size: 13px;
     }
 }
