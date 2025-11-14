@@ -6,19 +6,7 @@
     font-display: swap;
 }
 
-/* ===== БАЗОВЫЕ СТИЛИ (Mobile First) ===== */
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 0;
-    padding: 0;
-    margin-top: 32px !important; 
-    min-height: calc(60vh - 150px);
-    width: 100%;
-}
-
-/* Стили для блоков banner и gallery */
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
 .main-block-menu {
     min-width: 0;
     background: #D3BDA4;
@@ -31,10 +19,6 @@
     box-sizing: border-box;
 }
 
-.main-block-menu {
-    width: 100%;
-}
-
 .main-block-menu__header {
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
@@ -45,38 +29,22 @@
     line-height: 1.2;
 }
 
-.banner-container__outer {
-    width: 100%; 
-    overflow: hidden; 
-    position: relative;
-    margin-bottom: 10px;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0); 
-    }
-    100% {
-        transform: translateX(-50%); 
-    }
-}
-
 .menu-container {
     display: flex;
     gap: 10px;
     justify-content: center;
     margin: 30px 0 40px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .main-menu-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background: #F5ECDB;
-    color: #2c1810;
-    border-radius: 15px;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: #F5ECDB;
+    border-radius: 15px;
     box-sizing: border-box;
 }
 
@@ -106,239 +74,256 @@
     font-weight: bold;
 }
 
-/* Верхняя часть - напитки */
-.main-menu-drinks-section {
-    margin-bottom: 60px;
-}
-
-/* Нижняя часть - еда */
-.main-menu-food-section {
-    border-top: 2px solid #8b4513;
-    padding-top: 40px;
-}
-
-.main-menu-columns {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 60px;
-    align-items: start;
-}
-
-.main-menu-column {
+.menu-slider-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
-}
-
-.main-menu-drinks-section .main-menu-column {
-    min-height: auto;
-}
-
-.main-menu-category {
-    break-inside: avoid;
-}
-
-.main-menu-category-title {
-    font-family: 'Zabava', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #2c1810;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    border-bottom: 2px solid rgba(139, 69, 19, 0.3);
-}
-
-.main-menu-items {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.main-menu-item {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.main-menu-item-name {
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    flex: 1;
-    font-size: 16px;
-    color: #5D3117;
-    text-align: left;
-    min-width: 120px;
-}
-
-.main-menu-item-volume {
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
-    font-size: 14px;
-    color: #A46A1F;
-    white-space: nowrap;
-    margin-left: 4px;
-}
-
-.main-menu-item-dots {
-    flex: 1;
-    border-bottom: 1px dotted #8b4513;
-    margin: 0 5px;
-    min-width: 20px;
-    position: relative;
-    top: -2px;
-}
-
-.main-menu-item-price {
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    color: #918458;
-    white-space: nowrap;
-}
-
-/* Для больших элементов (завтраки, сэндвичи) */
-.main-menu-item-large {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    gap: 8px;
-}
-
-.main-menu-item-content {
-    flex: 1;
+    padding: 40px 0;
     width: 100%;
 }
 
-.main-menu-item-name-large {
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
+.menu-slider {
+    position: relative;
+    height: 360px;
+    width: 100%;
+    max-width: 1300px;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-card {
+    position: absolute;
+    width: 240px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(245, 236, 219, 0.95);
+    border: 3px solid #D3BDA4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.slider-card.active {
+    transform: scale(1.25);
+    z-index: 5;
+    opacity: 1;
+    filter: none;
+    box-shadow: 0 12px 32px rgba(60, 43, 23, 0.25);
+}
+
+.slider-card.left {
+    transform: scale(0.9) translateX(-320px);
+    z-index: 3;
+    opacity: 0.7;
+    filter: blur(1px);
+}
+
+.slider-card.right {
+    transform: scale(0.9) translateX(320px);
+    z-index: 3;
+    opacity: 0.7;
+    filter: blur(1px);
+}
+
+.slider-card:not(.active):not(.left):not(.right) {
+    opacity: 0;
+    transform: scale(0.6);
+    z-index: 1;
+}
+
+.item-image-small {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 2px solid #D3BDA4;
+}
+
+.item-image-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-info {
+    width: 100%;
+}
+
+.item-name-small {
+    font-size: 16px;
+    font-weight: 600;
     color: #5D3117;
-    display: block;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    text-align: left;
+    margin-bottom: 8px;
+    font-family: "Dela Gothic One", sans-serif;
     line-height: 1.2;
 }
 
-.main-menu-item-description {
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    display: block;
+.item-volume-small {
     font-size: 14px;
     color: #A46A1F;
-    text-align: left;
-    line-height: 1.4;
-}
-
-.main-menu-item-price-large {
+    margin-bottom: 12px;
     font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    color: #918458;
-    white-space: nowrap;
-    margin-left: 0;
-    align-self: flex-end;
 }
 
-/* ===== MOBILE (320px - 480px) ===== */
-@media (max-width: 480px) {
-    .main-menu-container {
-        padding: 20px 15px;
-        border-radius: 10px;
-    }
+.item-price-small {
+    font-size: 16px;
+    font-weight: 600;
+    color: #918458;
+    font-family: "Dela Gothic One", sans-serif;
+}
 
+.submit-btn {
+    background: #3C2B17;
+    color: #F5ECDB;
+    border: none;
+    padding: 16px 20px;
+    font-family: "Dela Gothic One", sans-serif;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #2d2112;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(60, 43, 23, 0.3);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.menu-learn-more-btn {
+    width: auto;
+    padding: 16px 40px;
+    margin-top: 0;
+    max-width: 220px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* Мобильные (480px - 768px) */
+@media (max-width: 768px) {
+    .main-menu-container {
+        padding: 30px 20px;
+    }
+    
+    .menu-slider {
+        height: 280px;
+    }
+    
+    .slider-card {
+        width: 180px;
+        height: 240px;
+        padding: 18px;
+    }
+    
+    .slider-card.active {
+        transform: scale(1.15);
+    }
+    
+    .slider-card.left {
+        transform: scale(0.85) translateX(-200px);
+    }
+    
+    .slider-card.right {
+        transform: scale(0.85) translateX(200px);
+    }
+    
+    .item-image-small {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .main-menu-title {
+        font-size: 36px;
+    }
+    
+    .main-menu-subtitle {
+        font-size: 15px;
+        letter-spacing: 6px;
+    }
+}
+
+/* Маленькие мобильные (320px - 480px) */
+@media (max-width: 480px) {
+    .main-block-menu {
+        padding: 0 15px 15px;
+    }
+    
+    .main-menu-container {
+        padding: 25px 15px;
+        border-radius: 12px;
+    }
+    
+    .menu-slider {
+        height: 240px;
+    }
+    
+    .slider-card {
+        width: 160px;
+        height: 210px;
+        padding: 15px;
+    }
+    
+    .slider-card.active {
+        transform: scale(1.1);
+    }
+    
+    .slider-card.left {
+        transform: scale(0.8) translateX(-150px);
+    }
+    
+    .slider-card.right {
+        transform: scale(0.8) translateX(150px);
+    }
+    
+    .item-image-small {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .item-name-small {
+        font-size: 15px;
+    }
+    
+    .item-volume-small,
+    .item-price-small {
+        font-size: 13px;
+    }
+    
     .main-menu-title {
         font-size: 32px;
-        margin-bottom: 10px;
     }
     
-    .main-menu-header {
-        margin-bottom: 8px;
-        padding-bottom: 16px;
-    }
-    
-    .main-menu-drinks-section {
-        margin-bottom: 40px;
-    }
-    
-    .main-menu-food-section {
-        padding-top: 24px;
-    }
-    
-    .main-menu-column {
-        gap: 32px;
-    }
-
-    .main-menu-item {
-        flex-wrap: nowrap;
-    }
-    
-    .main-menu-item-name {
-        min-width: 100px;
+    .main-menu-subtitle {
         font-size: 14px;
+        letter-spacing: 4px;
     }
     
-    .main-menu-item-dots {
-        min-width: 10px;
-        flex: 0.5;
-    }
-    
-    .main-menu-item-volume {
-        font-size: 12px;
-    }
-    
-    .main-menu-item-price {
+    .menu-learn-more-btn {
+        padding: 14px 35px;
         font-size: 14px;
-    }
-    
-    .main-menu-category-title {
-        font-size: 20px;
     }
 }
 
-/* ===== TABLET (768px - 1024px) ===== */
+/* Планшеты и десктопы (768px+) */
 @media (min-width: 768px) {
-    .main {
-        margin-top: 64px !important;
-    }
-    
-    .main-menu-columns {
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-    }
-    
-    .main-menu-drinks-section .main-menu-column {
-        min-height: 600px;
-    }
-    
-    .main-menu-item-large {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    
-    .main-menu-item-price-large {
-        margin-left: 20px;
-        align-self: flex-start;
-    }
-    
-    .main-menu-item {
-        flex-wrap: nowrap;
-    }
-    
     .main-menu-title {
         font-size: 48px;
     }
@@ -346,128 +331,66 @@
     .main-menu-subtitle {
         font-size: 18px;
     }
-}
-
-/* ===== LAPTOP (1024px - 1440px) ===== */
-@media (min-width: 1024px) {
-    .main-block-menu {
-        width: 60%;
-    }
-    
-    .main-menu-title {
-        font-size: 64px;
-        margin-bottom: 20px;
-    }
-    
-    .main-menu-subtitle {
-        font-size: 20px;
-    }
-    
-    .main-menu-drinks-section .main-menu-column:first-child {
-        justify-content: space-between;
-    }
-    
-    .main-menu-drinks-section .main-menu-column:last-child {
-        justify-content: space-between;
-    }
     
     .main-menu-container {
         padding: 50px 40px;
     }
 }
 
-/* ===== DESKTOP (1440px - 1920px) ===== */
-@media (min-width: 1440px) {
-    .main-menu-container {
-        max-width: 1400px;
-        /* padding: 60px 80px; */
+/* Большие экраны (1024px+) */
+@media (min-width: 1024px) {
+    /* УБРАЛ width: 60% для .main-block-menu */
+    .main-block-menu {
+        width: 60%; /* Или просто удали это свойство */
     }
     
     .main-menu-title {
-        font-size: 80px;
+        font-size: 56px;
     }
     
     .main-menu-subtitle {
-        font-size: 24px;
-        letter-spacing: 12px;
-    }
-    
-    .main-menu-category-title {
-        font-size: 28px;
-    }
-    
-    .main-menu-item-name,
-    .main-menu-item-price {
-        font-size: 18px;
-    }
-    
-    .main-menu-item-name-large {
         font-size: 20px;
+        letter-spacing: 10px;
     }
     
-    .main-menu-item-price-large {
-        font-size: 20px;
+    .main-menu-container {
+        max-width: 1500px;
+        padding: 60px 50px;
     }
 }
 
-/* ===== LARGE DESKTOP (1920px+) ===== */
-@media (min-width: 1920px) {
+/* Очень большие экраны (1440px+) */
+@media (min-width: 1440px) {
+    .main-menu-title {
+        font-size: 64px;
+    }
+    
+    .main-menu-subtitle {
+        font-size: 22px;
+    }
+    
     .main-menu-container {
         max-width: 1600px;
-        padding: 80px 100px;
+        padding: 70px 60px;
     }
     
-    .main-menu-title {
-        font-size: 96px;
-    }
-    
-    .main-menu-subtitle {
-        font-size: 28px;
-    }
-    
-    .main-menu-category-title {
-        font-size: 32px;
-    }
-    
-    .main-menu-items {
-        gap: 12px;
-    }
-    
-    .main-menu-item-name,
-    .main-menu-item-price {
-        font-size: 20px;
-    }
-    
-    .main-menu-item-name-large {
-        font-size: 24px;
-    }
-    
-    .main-menu-item-price-large {
-        font-size: 24px;
+    .menu-slider {
+        max-width: 1400px;
     }
 }
 
-/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ ===== */
-@media (max-width: 320px) {
-    .main-menu-container {
-        padding: 16px 12px;
-    }
-    
+/* Максимальные экраны (1920px+) */
+@media (min-width: 1920px) {
     .main-menu-title {
-        font-size: 28px;
+        font-size: 72px;
     }
     
     .main-menu-subtitle {
-        letter-spacing: 4px;
-        font-size: 14px;
+        font-size: 24px;
     }
     
-    .main-menu-item {
-        gap: 4px;
-    }
-    
-    .main-menu-item-name {
-        min-width: 80px;
-        font-size: 13px;
+    .main-menu-container {
+        max-width: 1800px;
+        padding: 80px 70px;
     }
 }
