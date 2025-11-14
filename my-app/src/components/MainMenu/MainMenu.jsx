@@ -4,9 +4,9 @@ import './MainMenu.css';
 function MainMenu () {
     return (
         <>
-            <section className="main-block-gallery shadow-box">
-                <h2 className="main-block-gallery__header">Наше меню</h2>
-                <div className="gallery-container">
+            <section className="main-block-menu shadow-box">
+                <h2 className="main-block-menu__header">Наше меню</h2>
+                <div className="menu-container">
 <div className="main-menu-container">
     {/* Заголовок */}
     <div className="main-menu-header">

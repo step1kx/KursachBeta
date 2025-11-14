@@ -4,7 +4,7 @@ import './MapBlock.css';
 function MapBlock() {
     return (
     <>
-        <section className="main-block-banner shadow-box">
+        <section className="main-block-map shadow-box">
             <h2 className="map-block__header">Приходите к нам</h2>
             <div className="map-container">
                 <div style={{
